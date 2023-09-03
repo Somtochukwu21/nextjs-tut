@@ -1,10 +1,10 @@
-import { Event } from "@/interface";
+import { Event, ExpectedProps } from "@/interface";
 import EventItem from "./EventItem";
 
-export default function EventList({ events }: any) {
+export default function EventList({ events }: { events: ExpectedProps[] }) {
 	return (
 		<ul className="w-[90%] max-w-[40rem] my-[5rem] mx-auto">
-			{events.map((event: any) => (
+			{events.map((event) => (
 				<EventItem
 					key={event.id}
 					date={event.date}
