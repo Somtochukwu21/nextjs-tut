@@ -1,15 +1,21 @@
 import { ReactNode } from "react";
-import classes from "./logistics-item.module.css";
+// import classes from "./logistics-item.module.css";
 
-function LogisticsItem(props: any) {
+type PropType = {
+	icon: () => JSX.Element;
+	children: ReactNode;
+};
+
+function LogisticsItem(props: PropType) {
 	const { icon: Icon } = props;
 
 	return (
-		<li className={classes.item}>
-			<span className={classes.icon}>
+		<li className="md:items-start	md:text-left flex text-2xl items-center flex-col text-center text-[#aefff8]">
+			<span
+				className="block [&>*]:h-8 [&>*]:w-8 mr-4 text-[#18e0d0]">
 				<Icon />
 			</span>
-			<span className={classes.content}>{props.children}</span>
+			<span className="block">{props.children}</span>
 		</li>
 	);
 }

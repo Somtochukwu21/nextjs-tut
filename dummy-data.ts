@@ -1,7 +1,6 @@
 import { Event } from "./interface";
 
-
-const DUMMY_EVENTS :Event[]= [
+const DUMMY_EVENTS: Event[] = [
 	{
 		id: "e1",
 		title: "Programming for everyone",
