@@ -16,6 +16,18 @@
   }
 
   .btnStyles {
-    @apply border bg-teal-500 border-teal-500 rounded px-6 py-2 text-teal-100 cursor-pointer hover:bg-teal-600 hover:border-teal-600 active:bg-teal-700 active:border-teal-700 shadow-md
+    @apply border hover:bg-teal-600 bg-teal-500 border-teal-500 rounded px-6 py-2 text-teal-100 cursor-pointer shadow-md hover:border-teal-600 active:bg-teal-700 active:border-teal-700
+  }
+
+  .control {
+    @apply flex-[1] flex items-center justify-between gap-4;
+  }
+
+  .control label {
+    @apply font-bold;
+  }
+
+  .control select {
+    @apply  bg-white rounded-md w-[70%] p-1 md:w-full border-2 border-gray-500 outline-none;
   }
 }

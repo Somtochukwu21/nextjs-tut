@@ -4,9 +4,10 @@ import { ReactNode } from "react";
 interface ExpectedProps {
 	children: ReactNode;
 	link?: string;
+	className?: string;
 }
 
-export default function Button({ children, link }: ExpectedProps) {
+export default function Button({ className, children, link }: ExpectedProps) {
 	if (link) {
 		return (
 			<Link href={link} className="btnStyles">
@@ -14,5 +15,5 @@ export default function Button({ children, link }: ExpectedProps) {
 			</Link>
 		);
 	}
-	return <button className="btnStyles">{children}</button>;
+	return <button className={`btnStyles ${className}`}>{children}</button>;
 }

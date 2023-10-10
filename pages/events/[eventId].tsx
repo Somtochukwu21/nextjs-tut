@@ -4,6 +4,7 @@ import EventLogistics from "@/components/event-detail/EventLogistics";
 import { getEventById } from "@/dummy-data";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
+import ErrorAlert from "@/components/UI/ErrorAlert";
 
 function EventDetailPage() {
 	const router = useRouter();
@@ -12,9 +13,9 @@ function EventDetailPage() {
 
 	if (!detailedEvent) {
 		return (
-			<div className=" bg-teal-700 font-bold m-auto flex items-center justify-center h-screen">
-				<p className=" p-1 rounded shadow-md bg-teal-600 text-white">NO EVENT FOUND</p>
-			</div>
+			<ErrorAlert>
+				<p>NO EVENT FOUND</p>
+			</ErrorAlert>
 		);
 	}
 	return (
